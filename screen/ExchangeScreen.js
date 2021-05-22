@@ -68,7 +68,7 @@ import {
 
       
        render(){
-         return(
+      
            if(this.state.IsExchangeRequestActive){
              return(
                <View style={{flex:1,justifyContent:'center'}}>
@@ -78,7 +78,7 @@ import {
                </View>
                <View style={{borderColor:"orange",borderWidth:2,justifyContent:'center',alignItem:'center',margin:10}}>
                <Text> Item Status</Text>
-               <Text>{this.state.itemStatus</Text>
+               <Text>{this.state.itemStatus}</Text>
                </View>
 
 <TouchableOpacity style={{borderWidth:1,borderColor:'orange',backgroundColor:"orange",width:300,alignSelf:'center',alignItems:'center',height:30,margin:10}}
@@ -93,12 +93,11 @@ onPress={()=>{
                </View>
              )
            }
-          }
            else{
              return(
                <View style={{flex:1}}>
-               <MyHeader title="Add Item" navigation={this.props.navigation}
-               <KeyboardAvoidingView style={{flex:1,justifyContent:'center',alignItem:'center'}}></KeyboardAvoidingView>
+               <MyHeader title="Add Item" navigation={this.props.navigation}/>
+               <KeyboardAvoidingView style={{flex:1,justifyContent:'center',alignItem:'center'}}>
 
             <TextInput
                 style ={styles.formTextInput}
@@ -136,9 +135,9 @@ onPress={()=>{
        }
 
      }
-    }
+     }
 
-  const styles = StyleSheet.create({
+     const styles = StyleSheet.create({
   keyBoardStyle : {
     flex:1,
     alignItems:'center',
@@ -162,16 +161,14 @@ onPress={()=>{
     borderRadius:10,
     backgroundColor:"#ff5722",
     shadowColor: "#000",
-  },
     shadowOffset: {
        width: 0,
        height: 8,
     },
-    buttonText:{
     shadowOpacity: 0.44,
     shadowRadius: 10.32,
     elevation: 16,
     marginTop:20
     },
-  
-  })
+  }
+)
